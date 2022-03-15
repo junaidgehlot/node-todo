@@ -58,7 +58,7 @@ const deleteTask = async (req, res) => {
 const updateTask = async (req, res) => {
     try {
         const { id: taskID } = req.params;
-        const task = await Task.findOneAndUpdate({_id: taskID},re  q.body,{
+        const task = await Task.findOneAndUpdate({_id: taskID},req.body,{
             new: true,
             runValidators: true
         });
